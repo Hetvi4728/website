@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* =====================
+           THEME VARIABLES
+        ===================== */
+        :root {
+            --bg: radial-gradient(circle at top, #1b2735 0%, #090a0f 60%);
+            --card: rgba(17, 24, 39, 0.85);
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+            --primary: #8b5cf6;
+            --link: #93c5fd;
+        }
+
+        body.dark {
+            --bg: radial-gradient(circle at top, #020617 0%, #000000 70%);
+            --card: rgba(2, 6, 23, 0.9);
+            --text: #f8fafc;
+            --muted: #94a3b8;
+            --primary: #a78bfa;
+            --link: #7dd3fc;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        /* =====================
+           BACKGROUND STARS
+        ===================== */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(1px 1px at 20% 30%, #fff, transparent),
+                radial-gradient(0.8px 0.8px at 80% 20%, #fff, transparent),
+                radial-gradient(0.6px 0.6px at 40% 70%, #fff, transparent),
+                radial-gradient(1px 1px at 70% 80%, #fff, transparent),
+                radial-gradient(0.6px 0.6px at 10% 90%, #fff, transparent);
+            animation: starsTwinkle 5s ease-in-out infinite alternate;
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        @keyframes starsTwinkle {
+            from { opacity: 0.3; }
+            to { opacity: 1; }
+        }
+
+        /* =====================
+           CURSOR TRAIL STARS (NO FALLING)
+        ===================== */
+        .cursor-star {
+            position: fixed;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 6px rgba(255,255,255,0.9);
+            pointer-events: none;
+            z-index: 2; /* above text & cards */
+            opacity: 1;
+        }
+
+        /* =====================
+           HEADER
+        ===================== */
+        header {
+            background: none;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-box {
+            max-width: 900px;
+            margin: 0 auto;
+            background:
+                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 16px;
+            padding: 30px 20px;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.35);
+            position: relative;
+        }
+
+        .toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /* =====================
+           CONTENT CARD
+        ===================== */
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--card);
+            padding: 24px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid rgba(139,92,246,0.4);
+        }
+
+        /* =====================
+           TEXT + ARROW
+        ===================== */
+        .info p {
+            position: relative;
+            padding-right: 24px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .info p::after {
+            content: "\f061";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            opacity: 0;
+        }
+
+        @keyframes arrowMove {
+            0% { transform: translateX(0); opacity: 0; }
+            50% { transform: translateX(6px); opacity: 1; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+        .info p:hover {
+            transform: translateX(6px);
+            color: var(--primary);
+        }
+
+        .info p:hover::after {
+            animation: arrowMove 0.8s ease-in-out infinite;
+            opacity: 1;
+        }
+
+        .info i { color: var(--primary); margin-right: 8px; }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--muted);
+        }
+
+        a { color: var(--link); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-box">
+        <div class="toggle" onclick="toggleDark()"><i class="fa-solid fa-moon"></i></div>
+        <h1>Patel Hetvi</h1>
+        <p>Student | Learner</p>
+    </div>
+</header>
+
+<div class="container">
+    <section class="info">
+        <h2>About Me</h2>
+        <p>Hello! My name is <b>Patel Hetvi</b>. I am a B.Tech IT 1st year student.</p>
+    </section>
+
+    <section class="info">
+        <h2>Personal Details</h2>
+        <p><i class="fa-solid fa-envelope"></i>Email: hetvipatel4728@email.com</p>
+        <p><i class="fa-brands fa-github"></i><a href="https://github.com/Hetvi4728">GitHub</a></p>
+        <p><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/patelhetvi4/">LinkedIn</a></p>
+        <p><i class="fa-solid fa-location-dot"></i>Navsari, Chikhli, Gujarat</p>
+    </section>
+
+    <section class="info">
+        <h2>Education</h2>
+        <p><i class="fa-solid fa-graduation-cap"></i><b>B.Tech (IT)</b> – 1st Year</p>
+        <p><b>G.H. Patel College of Engineering and Technology</b></p>
+        <p>Vallabh Vidyanagar, Anand, Gujarat, India</p>
+    </section>
+</div>
+
+<footer>© 2026 Patel Hetvi</footer>
+
+<script>
+    function toggleDark() {
+        document.body.classList.toggle('dark');
+    }
+
+    // Cursor-following stars (NO falling, NO shooting)
+    document.addEventListener('mousemove', (e) => {
+        const star = document.createElement('div');
+        star.className = 'cursor-star';
+        star.style.left = e.clientX + 'px';
+        star.style.top = e.clientY + 'px';
+        document.body.appendChild(star);
+
+        // fade out smoothly
+        star.animate([
+            { opacity: 1, transform: 'scale(1)' },
+            { opacity: 0, transform: 'scale(0.5)' }
+        ], {
+            duration: 1000,
+            easing: 'ease-out'
+        });
+
+        setTimeout(() => star.remove(), 1000);
+    });
+</script>
+
+</body>
+</html>
