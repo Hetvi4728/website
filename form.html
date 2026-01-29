@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Colored HTML Form</title>
+
+    <style>
+        body {
+            background-color: #f2f6ff;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        form {
+            background-color: #ffffff;
+            width: 350px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        label {
+            color: #34495e;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        input[type="reset"] {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            opacity: 0.8;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <form>
+        <label>Full Name</label>
+        <input type="text">
+
+        <label>Email</label>
+        <input type="email">
+
+        <label>Password</label>
+        <input type="password">
+
+        <label>Gender</label><br>
+        <input type="radio" name="g"> Male
+        <input type="radio" name="g"> Female
+        <br><br>
+
+        <label>Branch</label>
+        <select>
+            <option>Computer Engineering</option>
+            <option>Information Technology</option>
+            <option>Mechanical Engineering</option>
+            <option>Electrical Engineering</option>
+            <option>Civil Engineering</option>
+            <option>Electronics & Communication</option>
+            <option>AI & Data Science</option>
+        </select>
+
+        <label>Address</label>
+        <textarea rows="3"></textarea>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+</body>
+</html>
