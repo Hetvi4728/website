@@ -1,113 +1,137 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-     <title>FORM</title>
-   
-<style>
+    <title>Advanced HTML Form</title>
 
-body {
-background-color:silver;
-font-family: Arial, sans-serif;
-}
+    <style>
+        body {
+            background-color: #f2f6ff;
+            font-family: Arial, sans-serif;
+        }
 
-h1 {
-color:black;
-text-align: center;
-}
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
 
-form {
-background-color:white;
-width: 400px;
-margin: auto;
-padding: 20px;
-border-radius: 40px;
-}
+        form {
+            background-color: #ffffff;
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
 
-label {
-color:dark black;
-font-weight: bold;
-}
+        label {
+            color: #34495e;
+            font-weight: bold;
+        }
 
-input, select, textarea {
-width: 100%;
-padding: 8px;
-border:1px solid gray;
-}
+        input, select, textarea {
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
-input[type="radio"],
-input[type="checkbox"] {
-width: auto;
-}
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
 
-input[type="submit"] {
-background-color: blue;
-color: white;
-cursor: pointer;
-}
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+        }
 
-input[type="reset"] {
-background-color:red;
-color: white;
-cursor: pointer;
-}
+        input[type="reset"] {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+        }
 
-</style>
-
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 
 <body>
-     <h1>FORM</h1>
+
+<h2>Student Registration Form</h2>
 
 <form>
+    <!-- Text -->
+    <label>Full Name</label>
+    <input type="text">
 
-<label>Full name</label><br>
-<input type="text" placeholder="Name">
-<br>
-<br>
+    <!-- Email -->
+    <label>Email</label>
+    <input type="email">
 
-<label>Email</label><br>
-<input type="text" placeholder="*********@gmail.com">
-<br>
-<br>
+    <!-- Password -->
+    <label>Password</label>
+    <input type="password">
 
-<label>Password</label><br>
-<input type="password" placeholder="*********">
-<br>
-<br>
+    <!-- Date -->
+    <label>Date of Birth</label>
+    <input type="date">
 
-<label>Gender</label><br>
-<input type="radio" name="Gender">Male
-<input type="radio" name="Gender">Female
+    <!-- Gender -->
+    <label>Gender</label><br>
+    <input type="radio" name="g"> Male
+    <input type="radio" name="g"> Female
+    <br><br>
 
-<br><br>
+    <!-- Combo Box -->
+    <label>Branch</label>
+    <select>
+        <option>Computer Engineering</option>
+        <option>Information Technology</option>
+        <option>Mechanical Engineering</option>
+        <option>Electrical Engineering</option>
+        <option>Civil Engineering</option>
+        <option>AI & Data Science</option>
+    </select>
 
-<label>Birth-Date</label>
-<input type="text" placeholder="dd/mm/yyyy">
-<br><br>
+    <!-- File Upload -->
+    <label>Upload Photo</label>
+    <input type="file">
 
-<label>Branch</label>
-<select>
-<option>Computer Engineering</option>
-<option>Information Technology</option>
-<option>Mechanical Engineering</option>
-<option>Electrical Engineering</option>
-<option>Civil Engineering</option>
-<option>Electronics & Communication</option>
-<option>AI & Data Science</option>
-</select>
-<br><br>
+    <!-- Search -->
+    <label>Search Skill</label>
+    <input type="search" placeholder="Search here">
 
+    <!-- Range -->
+    <label>Skill Level</label>
+    <input type="range" min="0" max="100">
 
+    <!-- URL -->
+    <label>Portfolio Website</label>
+    <input type="url" placeholder="https://example.com">
 
-<label>Address</label>
-<textarea rows="5"></textarea>
-<br><br>
+    <!-- Color -->
+    <label>Favorite Color</label>
+    <input type="color">
 
-<input type="submit" value="Submit"><br><br>
-<input type="reset" value="Reset">
+    <!-- Address -->
+    <label>Address</label>
+    <textarea rows="3"></textarea>
 
+    <!-- Buttons -->
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
 </form>
-     
- 
+
 </body>
 </html>
+
