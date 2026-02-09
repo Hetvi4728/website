@@ -2,67 +2,7 @@
 <html>
 <head>
     <title>Advanced HTML Form</title>
-
-    <style>
-        body {
-            background-color: #f2f6ff;
-            font-family: Arial, sans-serif;
-        }
-
-        h2 {
-            color: #2c3e50;
-            text-align: center;
-        }
-
-        form {
-            background-color: #ffffff;
-            width: 400px;
-            margin: auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px gray;
-        }
-
-        label {
-            color: #34495e;
-            font-weight: bold;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 6px;
-            margin-top: 5px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        input[type="radio"],
-        input[type="checkbox"] {
-            width: auto;
-        }
-
-        input[type="submit"] {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 8px;
-            cursor: pointer;
-        }
-
-        input[type="reset"] {
-            background-color: #e74c3c;
-            color: white;
-            border: none;
-            padding: 8px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover,
-        input[type="reset"]:hover {
-            opacity: 0.8;
-        }
-    </style>
+    <link rel="stylesheet" href="form.css">
 </head>
 
 <body>
@@ -70,29 +10,23 @@
 <h2>Student Registration Form</h2>
 
 <form>
-    <!-- Text -->
     <label>Full Name</label>
     <input type="text">
 
-    <!-- Email -->
     <label>Email</label>
     <input type="email">
 
-    <!-- Password -->
     <label>Password</label>
     <input type="password">
 
-    <!-- Date -->
     <label>Date of Birth</label>
     <input type="date">
 
-    <!-- Gender -->
     <label>Gender</label><br>
     <input type="radio" name="g"> Male
     <input type="radio" name="g"> Female
     <br><br>
 
-    <!-- Combo Box -->
     <label>Branch</label>
     <select>
         <option>Computer Engineering</option>
@@ -103,31 +37,24 @@
         <option>AI & Data Science</option>
     </select>
 
-    <!-- File Upload -->
     <label>Upload Photo</label>
     <input type="file">
 
-    <!-- Search -->
     <label>Search Skill</label>
     <input type="search" placeholder="Search here">
 
-    <!-- Range -->
     <label>Skill Level</label>
     <input type="range" min="0" max="100">
 
-    <!-- URL -->
     <label>Portfolio Website</label>
     <input type="url" placeholder="https://example.com">
 
-    <!-- Color -->
     <label>Favorite Color</label>
     <input type="color">
 
-    <!-- Address -->
     <label>Address</label>
     <textarea rows="3"></textarea>
 
-    <!-- Buttons -->
     <input type="submit" value="Submit">
     <input type="reset" value="Reset">
 </form>
