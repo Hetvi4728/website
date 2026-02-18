@@ -28,7 +28,8 @@ This project helped me understand webpage structure, styling, and organizing mul
 ```
 website/
 │
-├── Details.html
+├── Website.html
+├── website.css
 ├── timetable.html
 ├── form/
 │   ├── form.html
