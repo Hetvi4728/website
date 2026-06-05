@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadCart()">
+
+<div class="navbar">
+    
+    <div class="store-name">
+        <h1>Painting Store</h1>
+    </div>
+
+    <div class="left-section">
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="Store Logo">
+        </div>
+    </div>
+
+        <a href="cart.html" class="cart-link">
+            🛒 Cart (<span id="cart-count">0</span>)
+        </a>
+
+</div>
+<h2 style="padding:20px;">Your Cart</h2>
+
+<div id="cart-items" style="padding:20px;"></div>
+
+<h3 style="padding:20px;">Total: ₹<span id="total-price">0</span></h3>
+
+<button id="paymentBtn" onclick="proceedToPayment()" class="buy-btn" style="margin:20px;">
+    Proceed to Payment
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
